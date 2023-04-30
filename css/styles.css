@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #195657 !important;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+main{
+    width: 100%;
+    position: fixed;
+    background-image: linear-gradient(90deg, rgba(27,84,84, 0.3),  #195657de), url("../img/fondo.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    
+}
+aside{
+    height: 100vh;
+    background-image: linear-gradient(90deg, #c4ffb827, #195657,  #c4ffb836);
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+section{
+    height: 100vh;
+}
+h1{
+    color: white;
+    font-weight: 1000px;
+}
+/* INDEX */
+.cardMedico{
+    background-image: url("../img/doctores.jpg");
+    width: 200px !important;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 10px 10px 10px black;
+    text-shadow: 5px 5px 5px black;
+}
+.cardMedico {
+    position: relative;
+    width: 220px !important;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .cardMedico::before,
+  .cardMedico::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(31, 88, 107);
+    transition: all 0.5s;
+  }
+  
+  .cardMedico::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+  }
+  
+  .cardMedico::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+  }
+  
+  .cardMedico:hover::before,
+  .cardMedico:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+  }
+  
+  .cardMedico:hover:after {
+    content: "ENTRAR";
+  }
+  .cardPaciente {
+    position: relative;
+    width: 220px !important;
+    height: 320px;
+    background: mediumturquoise;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .cardPaciente::before,
+  .cardPaciente::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(31, 88, 107);
+    transition: all 0.5s;
+  }
+  
+  .cardPaciente::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+  }
+  
+  .cardPaciente::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+  }
+  
+  .cardPaciente:hover::before,
+  .cardPaciente:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+  }
+  
+  .cardPaciente:hover:after {
+    content: "ENTRAR";
+  }
+.aMedico{
+    font-weight: 1000px;
+    text-decoration: none;
+}
+.cardPaciente{
+    background-image: url("../img/doctores.jpg");
+    width: 200px !important;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 10px 10px 10px black;
+    text-shadow: 5px 5px 5px black;
+}
+.aPaciente{
+    font-weight: 1000px;
+    text-decoration: none;
+}
+.padreInicio{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgb(38, 250, 126));
+    width: 100%;
+    height: 100%;
+}
+.cont-info{
+    /* Rectangle 24 */  
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 200px 30px;
+}
+.color-a:hover{
+    background-color: #EE5645 !important;
+}
+.contenedor{
+    width: 50%;
+    height: 60%;
+    background-color: rgba(177, 222, 223, 0.5);
+    border-radius: 50px;
+}
+@media (width < 768px ) {
+    .info{
+        display: none;
+    }
+    aside{
+        border-radius: 0px;
+    }
+} 
+@media (max-width: 991px){
+    .img1{
+        width: 50%;
+        align-self: center;
+    }
+}
+/* CALENDARIO */
+#calendar{
+    position: absolute;
+    width: 100%;
+}
+dialog{
+    margin-top: 20rem;
+    border-radius: 1rem;
+    background-color: aqua;
+    z-index: 1;
+    top: 200;
+    left: 20;
+    position: absolute;
+}
+/* Registro MEDICO */
+.inputs{
+    height: 40px;
+    width: 70% !important;
+}
+.submit{
+    height: 40px;
+    width: 100px !important;
+    background-color: #FABB58 !important;
+    background: linear-gradient(90deg, rgba(250,187,88,1) 0%, rgba(245,134,68,1) 100%);
+    border-color: #FABB58 !important;
+    border-radius: 10px;
+}
+/*  BOTONES */
+.botones{
+    height: 60px;
+    border-radius: 30px !important;
+    background-color: #FABB58 !important;
+    background: linear-gradient(90deg, rgba(250,187,88,1) 0%, rgba(245,134,68,1) 100%);
+    border-color: #FABB58 !important;
+}
+.botones a{
+    color: white;
+    text-decoration: none;
+}
+/*  LISTA PACIENTES */
+.tabla{
+    background-color: black !important;
+    color: white !important;
+}
+/*  Login MEDICO */
+.padreLogin{
+    width: 100%;
+    height: 100%;
+}
